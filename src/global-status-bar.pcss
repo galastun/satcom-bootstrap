@@ -1,0 +1,64 @@
+.global-status-bar {
+    background-color: $statusbar-color;
+    width: 100%;
+    height: $statusbar-height;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $statusbar-padding-y $statusbar-padding-x;
+
+    @include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
+    > .container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.statusbar-mission {
+  display: inline-block;
+  align-self: flex-start;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: $statusbar-padding-x;
+  font-size: $font-size-lg;
+  line-height: inherit;
+  white-space: nowrap;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+
+/**
+ * Navbar nav
+ *
+ * Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+ */
+
+.statusbar-nav {
+  display: flex;
+  flex-direction: column; /* cannot use `inherit` to get the `.navbar`s value */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .statusbar-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
+ * Navbar text
+ *
+ *//
+
+.statusbar-text {
+  display: inline-block;
+  padding-top:    .425rem;
+  padding-bottom: .425rem;
+}

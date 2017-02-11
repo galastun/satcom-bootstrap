@@ -1,0 +1,31 @@
+{
+  "name": "satcom-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap CSS for Satcom Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "grunt",
+    "start": "node demo.js"
+  },
+  "keywords": [
+    "satcom",
+    "css"
+  ],
+  "author": "Galastun",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "grunt": "^1.0.1",
+    "grunt-postcss": "^0.8.0",
+    "postcss-conditionals": "^2.1.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-flexbox": "^1.0.2",
+    "postcss-import": "^9.1.0",
+    "postcss-mixins": "^5.4.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-scss": "^0.4.0",
+    "postcss-simple-vars": "^3.0.0"
+  }
+}

@@ -773,6 +773,7 @@ template {
 
 :  5px;
   margin-top: 0.5rem;
+  cursor: pointer;
 
   @include hover-focus {
     text-decoration: none;
@@ -838,6 +839,17 @@ template {
 
 :  24px;
   font-size: 2.4rem;
+}
+.nav-block label {
+  margin-top            
+
+:  2.5px;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  font-size            
+
+:  10px;
+  font-size: 1rem;
 }
 .global-status-bar {
     background-color: #152636;
@@ -1016,22 +1028,22 @@ template {
 }
 /* SPECIAL satcom-buttonS */
 .button-master-off {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: auto;
-  height: 45px;
+  height: 35px;
   padding-left            
 
 :  10px;
   padding-left: 1.0rem;
   padding-right: 1.5em;
-  font-size: 18px;
+  font-size: 15px;
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
   background: -webkit-linear-gradient(top, #055da0 0%, #0271ca 100%);
   background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
 }
 .button-master-off:before {
-    position: relative;
-	top: 3px;
-	display: inline-block;
 	font-family: "Satcom Icons";
 	font-style: normal;
 	font-weight: normal;
@@ -1044,8 +1056,8 @@ template {
     margin-right: 1.0rem;
     font-size            
 
-:  24px;
-    font-size: 2.4rem;
+:  20px;
+    font-size: 2.0rem;
     content: "\e920 ";
 }
 .button-master-off:hover {

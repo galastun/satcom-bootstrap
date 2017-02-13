@@ -17,6 +17,7 @@
   font-size: 1.5rem;
   padding: $nav-link-padding;
   margin-top: 0.5rem;
+  cursor: pointer;
 
   @include hover-focus {
     text-decoration: none;
@@ -63,8 +64,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    
+
     .satcom-icon {
         font-size: 2.4rem;
+    }
+
+    label {
+        margin-top: 0.25rem;
+        text-transform: uppercase;
+        font-size: 1rem;
     }
 }

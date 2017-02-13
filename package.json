@@ -16,7 +16,9 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
+    "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "postcss-conditionals": "^2.1.0",
     "postcss-cssnext": "^2.9.0",

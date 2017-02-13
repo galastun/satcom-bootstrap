@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        sass: {
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'dist/satcom-bootstrap.min.css': ['src/satcom-bootstrap.scss', 'src/bootstrap-grid.scss']
+                }
+            }
+        },
         postcss: {
             options: {
                 processors: [
@@ -10,7 +20,8 @@ module.exports = function(grunt) {
                     require('postcss-flexbox')(),
                     require('postcss-nested')(),
                     require('postcss-conditionals')(),
-                    require('postcss-simple-vars')()
+                    require('postcss-simple-vars')(),
+                    require('cssnano')()
                 ]
             },
             dist: {
@@ -21,5 +32,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.registerTask('default', ['postcss']);
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.registerTask('default', ['sass']);
 };

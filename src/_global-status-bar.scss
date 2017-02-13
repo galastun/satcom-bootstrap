@@ -18,7 +18,6 @@
 
 .statusbar-mission {
   display: inline-block;
-  align-self: flex-start;
   padding-top: .25rem;
   padding-bottom: .25rem;
   margin-right: $statusbar-mission-padding-x;
@@ -73,7 +72,7 @@
 /**
  * Navbar text
  *
- *//
+ */
 
 .statusbar-text {
   display: inline-block;

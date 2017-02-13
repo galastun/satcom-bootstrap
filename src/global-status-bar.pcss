@@ -4,9 +4,9 @@
     height: $statusbar-height;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: $statusbar-padding-y $statusbar-padding-x;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $statusbar-padding-x;
 
     @include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
     > .container {
@@ -21,7 +21,7 @@
   align-self: flex-start;
   padding-top: .25rem;
   padding-bottom: .25rem;
-  margin-right: $statusbar-padding-x;
+  margin-right: $statusbar-mission-padding-x;
   font-size: $font-size-lg;
   line-height: inherit;
   white-space: nowrap;
@@ -40,15 +40,33 @@
 
 .statusbar-nav {
   display: flex;
-  flex-direction: column; /* cannot use `inherit` to get the `.navbar`s value */
+  flex-direction: row; /* cannot use `inherit` to get the `.navbar`s value */
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  height: 100%;
 
   .statusbar-link {
     padding-right: 0;
     padding-left: 0;
   }
+
+  .nav-link.active {
+    border-bottom: 0;
+    border-left: 0;
+    margin-top: 0;
+    border-right: 0;
+    border-top: 5px;
+    border-style: solid;
+    border-color: #0271ca;
+    color: $white;
+  }
+}
+
+.statusbar-right {
+    float: right;
+    flex-grow: 2;
+    justify-content: flex-end;
 }
 
 

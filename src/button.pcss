@@ -1,0 +1,99 @@
+/*
+**
+** 	SATCOM BUTTON
+** 	==========================================================================
+**	
+*/
+/* 	REQUIRED CLASSES */
+.satcom-button {
+  box-sizing: border-box;
+  background: #055DA0;
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+  padding: 5px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  color: #fff;
+  font-family: 'open_sansregular', sans-serif;
+  font-size: 14px;
+  margin: 5px;
+  width: auto;
+  min-width: 120px;
+  height: 35px;
+  cursor: pointer;
+  outline: none;
+}
+.satcom-button-default {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.satcom-button:disabled,
+.satcom-button:disabled:hover {
+  opacity: .4;
+  cursor: not-allowed;
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+}
+.satcom-button:active,
+.satcom-button:default:active,
+.satcom-button-default:active {
+  background: #0462AB;
+  box-shadow: inset 0 1px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #0462AB;
+}
+.satcom-button:hover,
+.satcom-button-default:hover {
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #0c81da), color-stop(100%, #0790fe));
+  background: linear-gradient(to bottom, #0c81da 0%, #0790fe 100%);
+  outline: none;
+}
+/* VARIANT CLASSES */
+/* Smaller, half-width satcom-button */
+.satcom-button-half-wide {
+  min-width: 50px;
+  padding: 5px;
+}
+.satcom-button-half-wide:active {
+  min-width: 50px;
+  padding: 5px;
+}
+/* Smaller, half-height satcom-button */
+.satcom-button-half-tall {
+  min-width: 100px;
+  height: 25px;
+  padding: 0;
+}
+/* SPECIAL satcom-buttonS */
+.button-master-off {
+  max-width: auto;
+  height: 45px;
+  padding-left: 1.0rem;
+  padding-right: 1.5em;
+  font-size: 18px;
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+}
+
+.button-master-off:before {
+    position: relative;
+	top: 3px;
+	display: inline-block;
+	font-family: "Satcom Icons";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    margin-right: 1.0rem;
+    font-size: 2.4rem;
+    content: "\e920 ";
+}
+
+.button-master-off:hover {
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #0c81da), color-stop(100%, #0790fe));
+  background: linear-gradient(to bottom, #0c81da 0%, #0790fe 100%);
+}
+.button-master-off:active {
+}

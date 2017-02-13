@@ -27,6 +27,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 4 */
   -ms-overflow-style: scrollbar; /* 5 */
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* 6 */
+	font-size: 62.5%;
 }
 
 *,
@@ -210,11 +211,11 @@ a {
  */
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  color: $link-color;
   text-decoration: none;
 
   @include hover-focus {
-    color: inherit;
+    color: $link-color;
     text-decoration: none;
   }
 

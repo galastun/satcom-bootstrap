@@ -5,7 +5,7 @@
 **	
 */
 /* 	REQUIRED CLASSES */
-.satcom-button {
+.btn {
   box-sizing: border-box;
   background: #055DA0;
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
@@ -25,48 +25,49 @@
   height: 35px;
   cursor: pointer;
   outline: none;
+
 }
-.satcom-button-default {
+.btn-default {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
-.satcom-button:disabled,
-.satcom-button:disabled:hover {
+.btn:disabled,
+.btn:disabled:hover {
   opacity: .4;
   cursor: not-allowed;
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
   background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
 }
-.satcom-button:active,
-.satcom-button:default:active,
-.satcom-button-default:active {
+.btn:active,
+.btn:default:active,
+.btn-default:active {
   background: #0462AB;
   box-shadow: inset 0 1px 2px 2px rgba(0, 0, 0, 0.5);
   border: 1px solid #0462AB;
 }
-.satcom-button:hover,
-.satcom-button-default:hover {
+.btn:hover,
+.btn-default:hover {
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #0c81da), color-stop(100%, #0790fe));
   background: linear-gradient(to bottom, #0c81da 0%, #0790fe 100%);
   outline: none;
 }
 /* VARIANT CLASSES */
 /* Smaller, half-width satcom-button */
-.satcom-button-half-wide {
+.btn-half-wide {
   min-width: 50px;
   padding: 5px;
 }
-.satcom-button-half-wide:active {
+.btn-half-wide:active {
   min-width: 50px;
   padding: 5px;
 }
 /* Smaller, half-height satcom-button */
-.satcom-button-half-tall {
+.btn-half-tall {
   min-width: 100px;
   height: 25px;
   padding: 0;
 }
 /* SPECIAL satcom-buttonS */
-.button-master-off {
+.btn-master-off {
   display: flex;
   max-width: auto;
   height: 35px;
@@ -77,7 +78,7 @@
   background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
 }
 
-.button-master-off:before {
+.btn-master-off:before {
 	font-family: "Satcom Icons";
 	font-style: normal;
 	font-weight: normal;
@@ -89,9 +90,151 @@
     content: "\e920 ";
 }
 
-.button-master-off:hover {
+.btn-master-off:hover {
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #0c81da), color-stop(100%, #0790fe));
   background: linear-gradient(to bottom, #0c81da 0%, #0790fe 100%);
 }
+/*
 .button-master-off:active {
+}
+*/
+
+.btn-secondary {
+  background: $btn-secondary-bg;
+}
+
+// scss-lint:disable QualifyingElement
+
+//
+// Base styles
+//
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+/*
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg);
+}
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg);
+}
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg);
+}
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg);
+}
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg);
+}
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg);
+}
+*/
+
+// Remove all backgrounds
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-secondary {
+  @include button-outline-variant($btn-secondary-border);
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  @include hover {
+    border-color: transparent;
+  }
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &:disabled {
+    color: $btn-link-disabled-color;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
 }

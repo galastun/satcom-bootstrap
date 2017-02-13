@@ -5,14 +5,14 @@
         <link rel="stylesheet" type="text/css" href="dist/satcom-bootstrap.min.css">
     </head>
     <body>
-        <div class="global-status-bar">
+        <div class="statusbar">
             <div class="statusbar-mission">Test Mission 2.0</div>
             <ul class="statusbar-nav">
                 <li class="nav-item">
                     <a class="nav-link">Monitor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Settings</a>
+                    <a class="nav-link active">Settings</a>
                 </li>
             </ul>
             <ul class="statusbar-nav statusbar-right">
@@ -25,10 +25,24 @@
 				    <label>Equipment</label>
                 </li>
                 <li class="nav-block">
-                    <button class="satcom-button button-master-off">Master OFF</button>
+                    <button class="btn btn-master-off">Master OFF</button>
                 </li>
             </ul>
         </div>
-        
+        <div class="toolbar-secondary"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Hey!</h1>
+                    <button class="btn btn-primary">Button1</button>
+                    <button class="btn btn-default">Button1</button>
+                </div>
+                <div class="col-md-6">
+                    <h1>Hey!</h1>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-disabled">Secondary</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

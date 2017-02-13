@@ -5,10 +5,10 @@ $inactive-font-color: #6F8090;
 $default-font-color: #919CA7;
 $inactive-icon-color: #3d5972;
 $settings-pane-color: #071B23;
-$main-pane-color: #253F58;
+$toolbar-bg-color: #253F58;
+$toolbar-secondary-bg: #071b23;
 $slide-out-pane-color: #1B3044;
 $settings-body-primary: #23384e;
-$settings-body-secondary: #071b23;
 $ok-color: #81d135;
 $navigation-selected: #FFF;
 $default-blue: #0081E7;
@@ -142,13 +142,13 @@ $border-width: 1px;
  * Settings for the `<body>` element.
  */
 
-$body-bg:       $white;
+$body-bg:       $statusbar-color;
 $body-color:    $default-font-color;
 
 /**
  * Navs
  */
-$nav-link-padding:              .5em 1em;
+$nav-link-padding:              1.0rem 2.4rem;
 $nav-disabled-link-color:       $gray-light;
 
 /** Links
@@ -339,9 +339,9 @@ $btn-primary-color:              $white;
 $btn-primary-bg:                 $brand-primary;
 $btn-primary-border:             $btn-primary-bg;
 
-$btn-secondary-color:            $gray-dark;
-$btn-secondary-bg:               $white;
-$btn-secondary-border:           #ccc;
+$btn-secondary-color:            $white;
+$btn-secondary-bg:               #24425B;
+$btn-secondary-border:           #24425B;
 
 $btn-info-color:                 $white;
 $btn-info-bg:                    $brand-info;

@@ -10,6 +10,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        watch: {
+		  sass: {
+			  files: ['**/*.scss'],
+			  tasks: ['sass:dist']
+		  }
+	    }, 
         postcss: {
             options: {
                 processors: [
@@ -33,5 +39,6 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['sass']);
 };

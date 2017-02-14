@@ -1,0 +1,179 @@
+.badge-upper-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.badge-upper-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.badge-lower-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.badge-lower-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin badge-status {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.badge-status-ok {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+
+        color: $status-ok;
+        content: '\e903';
+    }
+}
+
+.badge-status-alert {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+        
+        color: $status-alert;
+        content: '\e900';
+    }
+}
+
+.badge-status-error {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+        
+        color: $status-error;
+        content: '\e901';
+    }
+}
+
+.badge-status-caution {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+        
+        color: $status-caution;
+        content: '\e902';
+    }
+}
+
+.badge-status-standby {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+        
+        color: $status-standby;
+        content: '\e904';
+    }
+}
+
+.badge-status-off {
+    @include badge-status;
+
+    &:before {
+        @include satcom-icon;
+        font-size: 1.2rem;
+        
+        color: $status-off;
+        content: '\e905';
+    }
+}
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: 1;
+  color: $badge-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius();
+
+ /* not anymore...
+  // Empty badges collapse automatically
+  &:empty:not(.badge-status-ok) {
+    display: none;
+  }
+  */ 
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
+a.badge {
+  @include hover-focus {
+    color: $badge-link-hover-color;
+    text-decoration: none;
+  }
+}
+// scss-lint:enable QualifyingElement
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  @include border-radius($badge-pill-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+.badge-default {
+  @include badge-variant($badge-default-bg);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary-bg);
+}
+
+.badge-success {
+  @include badge-variant($badge-success-bg);
+}
+
+.badge-info {
+  @include badge-variant($badge-info-bg);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning-bg);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger-bg);
+}

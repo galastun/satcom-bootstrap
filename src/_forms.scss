@@ -1,0 +1,109 @@
+/*
+**
+** 	INPUT TEXT
+** 	==========================================================================
+*/
+/* 	REQUIRED CLASSES */
+input[type=text],
+input[type=search] {
+  margin: 10px 5px;
+  padding: 2px 5px;
+  border-radius: 2px;
+  border: 2px solid #c7d9e7;
+  border-bottom: none;
+  font-size: 1em;
+  font-weight: normal;
+  color: #000;
+  background: -webkit-gradient(linear, left top, left top, color-stop(0%, #e7f5fe), color-stop(100%, #d6eeff));
+  background: linear-gradient(to bottom, #e7f5fe 0%, #d6eeff 100%);
+}
+input[type=text]:disabled,
+input[type=search]:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+}
+
+/*
+**  SATCOM SEARCH
+**  ==========================================================================
+*/
+.satcom-search {
+  position: relative;
+  width: 20%;
+  color: #A3AFBB;
+  display: flex;
+  align-items: center;
+
+  icons {
+      display: flex;
+      flex-shrink: 1;
+  }
+
+  input[type=search] {
+      flex-grow: 1;
+  }
+}
+
+/* padding to allow for icons */
+input[type=search] {
+  padding-left:  30px;
+  padding-right: 30px;
+}
+
+/* style icon */
+input[type=search] i {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* style icons when focused */
+input[type=search]:focus + icons{
+  color: #0271ca !important;
+}
+
+@mixin satcom-search {
+    font-family: "Satcom Icons";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-size: 1.25em;
+    cursor: pointer;
+
+    input[type=search]:focus & {
+        color: #0271ca;
+    }
+}
+
+.search-search:before {
+    @include satcom-search;
+    position: absolute;
+    left: 1.0rem;
+    content: '\e90f';
+}
+
+.search-cancel:before {
+    @include satcom-search;
+    position: relative;
+    right: 2.4rem;
+    content: '\e914';
+}
+
+/*
+.satcom-search:after {
+    @include satcom-search;
+    right: 2.4rem;
+    content: '\e914';
+}
+
+.satcom-search:before {
+    @include satcom-search;
+    left: 2.4rem;
+    content: '\e90f';
+}
+*/
+
+/* align glyph */
+.left-addon  { font-size: 1.25em; left:  0px; top: 5px;}
+.right-addon { font-size: 1em; right: -8px; top: 6px;}

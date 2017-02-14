@@ -30,21 +30,23 @@
 .btn-default {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
+
+.btn-disabled,
 .btn:disabled,
 .btn:disabled:hover {
   opacity: .4;
-  cursor: not-allowed;
+  cursor: $cursor-disabled;
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #055da0), color-stop(100%, #0271ca));
   background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
 }
-.btn:active,
+.btn:active:not(.btn-disabled),
 .btn:default:active,
 .btn-default:active {
   background: #0462AB;
   box-shadow: inset 0 1px 2px 2px rgba(0, 0, 0, 0.5);
   border: 1px solid #0462AB;
 }
-.btn:hover,
+.btn:hover:not(.btn-disabled),
 .btn-default:hover {
   background: -webkit-gradient(linear, left top, left top, color-stop(0%, #0c81da), color-stop(100%, #0790fe));
   background: linear-gradient(to bottom, #0c81da 0%, #0790fe 100%);

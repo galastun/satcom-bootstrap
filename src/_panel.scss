@@ -1,0 +1,18 @@
+.panel {
+    width: 100%;
+
+    .panel-header {
+        color: $white;
+        font-size: 1.5rem;
+    }
+
+    .panel-content {
+        background-color: $toolbar-bg-color;
+        padding: $panel-padding;
+    }
+
+    .panel-footer {
+        background-color: $slide-out-pane-color;
+        padding: $panel-padding;
+    }
+}

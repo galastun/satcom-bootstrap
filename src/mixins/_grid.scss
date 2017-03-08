@@ -40,6 +40,7 @@
 @mixin make-row($gutters: $grid-gutter-widths) {
   display: flex;
   flex-wrap: wrap;
+  height: inherit;
 
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {

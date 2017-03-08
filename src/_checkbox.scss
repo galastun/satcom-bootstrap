@@ -1,0 +1,91 @@
+.satcom-checkbox {
+  padding: 5px;
+  font-family: 'open_sansregular', sans-serif;
+}
+.satcom-checkbox input[type=checkbox],
+.satcom-checkbox input[type=checkbox] + label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.satcom-checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+  display: none;
+}
+.satcom-checkbox input[type=checkbox] + label {
+  cursor: hand;
+  cursor: pointer;
+  position: relative;
+  font-weight: normal;
+  margin-left: 20px;
+  color: #B4BBC2;
+}
+/* the main checkbox */
+.satcom-checkbox input[type=checkbox] + label::before {
+  position: relative;
+  display: inline-block;
+  content: '';
+  height: 18px;
+  width: 20px;
+  margin: 0 10px 0 -30px;
+  vertical-align: middle;
+  background: -webkit-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -moz-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -ms-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -o-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+  border-radius: 2px;
+  z-index: 5;
+}
+.satcom-checkbox input[type=checkbox] + label::after {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  display: inline-block;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: -webkit-linear-gradient(bottom, #024b82 0%, #024b82 50%, #1b80ce 50%, #1b80ce 100%);
+  background: -moz-linear-gradient(bottom, #024b82 0%, #024b82 50%, #1b80ce 50%, #1b80ce 100%);
+  background: -ms-linear-gradient(bottom, #024b82 0%, #024b82 50%, #1b80ce 50%, #1b80ce 100%);
+  background: -o-linear-gradient(bottom, #024b82 0%, #024b82 50%, #1b80ce 50%, #1b80ce 100%);
+  background: linear-gradient(to bottom, #024b82 0%, #024b82 50%, #1b80ce 50%, #1b80ce 100%);
+  border-radius: 2px;
+  z-index: 1;
+}
+.satcom-checkbox input[type=checkbox]:checked + label::before {
+  background: url(../img/native-substitue-checkmark.svg) 45% 45% no-repeat, -webkit-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: url(../img/native-substitue-checkmark.svg) 45% 45% no-repeat, -moz-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: url(../img/native-substitue-checkmark.svg) 45% 45% no-repeat, -ms-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: url(../img/native-substitue-checkmark.svg) 45% 45% no-repeat, -o-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: url(../img/native-substitue-checkmark.svg) 45% 45% no-repeat, linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+}
+.satcom-checkbox input[type=checkbox]:checked + label::after {
+  background: -webkit-linear-gradient($checkbox-gradient-checked);
+  background: -moz-linear-gradient($checkbox-gradient-checked);
+  background: -ms-linear-gradient($checkbox-gradient-checked);
+  background: -o-linear-gradient($checkbox-gradient-checked);
+  background: linear-gradient(to $checkbox-gradient-checked);
+  z-index: 1;
+}
+.satcom-checkbox input[type=checkbox]:disabled + label::before {
+  background: $checkbox-background;
+  cursor: not-allowed;
+}
+.satcom-checkbox input[type=checkbox]:disabled + label::after {
+  background: -webkit-linear-gradient($checkbox-gradient);
+  background: -moz-linear-gradient($checkbox-gradient);
+  background: -ms-linear-gradient($checkbox-gradient);
+  background: -o-linear-gradient($checkbox-gradient);
+  background: linear-gradient(to $checkbox-gradient);
+  border-radius: 2px;
+  cursor: not-allowed;
+}
+.satcom-checkbox input[type=checkbox]:disabled:checked + label::before {
+  content: '';
+  background: #375a78 url(../img/native-substitue-checkmark.svg) 100% 100% no-repeat;
+  background-size: 66% 66%;
+  background-repeat: no-repeat;
+  background-position: 45% 45%;
+}

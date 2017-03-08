@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Satcom Icons";
-  src: url(../../fonts/satcom-icons.woff);
-  src: url(../../fonts/satcom-icons.ttf);
+  src: url(../fonts/satcom-icons.woff);
+  src: url(../fonts/satcom-icons.ttf);
 }
 
 .satcom-icon {
@@ -138,6 +138,10 @@
 
 .satcom-icon-resistor:before {
   content: "\e923";
+}
+
+.satcom-icon-layers:before {
+  content: "\e924";
 }
 
 .satcom-icon-groundstation-notlive:before {

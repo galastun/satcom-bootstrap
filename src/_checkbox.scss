@@ -14,11 +14,11 @@
   display: none;
 }
 .satcom-checkbox input[type=checkbox] + label {
-  cursor: hand;
   cursor: pointer;
   position: relative;
   font-weight: normal;
   margin-left: 20px;
+  margin-right: 1rem;
   color: $checkbox-color;
 }
 /* the main checkbox */

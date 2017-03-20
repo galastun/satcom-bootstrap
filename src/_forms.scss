@@ -5,7 +5,10 @@
 */
 /* 	REQUIRED CLASSES */
 input[type=text],
-input[type=search] {
+input[type=search],
+input[type=number],
+input[type=date],
+textarea {
   margin: 10px 5px;
   padding: 2px 5px;
   border-radius: 2px;
@@ -18,7 +21,10 @@ input[type=search] {
   background: linear-gradient(to bottom, #e7f5fe 0%, #d6eeff 100%);
 }
 input[type=text]:disabled,
-input[type=search]:disabled {
+input[type=search]:disabled,
+input[type=number]:disabled,
+input[type=date]:disabled,
+textarea:disabled  {
   color: rgba(0, 0, 0, 0.3);
   cursor: not-allowed;
 }

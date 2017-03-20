@@ -1,0 +1,182 @@
+.satcom-pushbutton {
+  display: block;
+  margin: 10px 0;
+  width: auto;
+  height: 22px;
+}
+.satcom-pushbutton-input {
+  display: none;
+  position: relative;
+}
+.satcom-pushbutton-button {
+  cursor: pointer;
+  font-family: 'open_sansregular', serif;
+  font-weight: 100;
+  font-size: 12px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  min-width: 60px;
+  color: #fff;
+  /*line-height: 1;*/
+  background: -webkit-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -moz-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -ms-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -o-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  outline: 1px solid #0e1822;
+  padding: 1px 20px 0;
+  margin: 0;
+}
+.satcom-pushbutton-input:checked + .satcom-pushbutton-button .off {
+  display: none;
+}
+.satcom-pushbutton-input:checked + .satcom-pushbutton-button .on {
+  display: block;
+  color: #3AE304;
+}
+.satcom-pushbutton-input:checked + .satcom-pushbutton-button {
+  background: -webkit-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -moz-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -ms-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -o-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: linear-gradient(to bottom, #101923 0%, #192937 100%);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #101923;
+}
+.satcom-pushbutton-input:not(checked) + .satcom-pushbutton-button .on {
+  display: none;
+}
+.satcom-pushbutton-input:not(checked) + .satcom-pushbutton-button .off {
+  display: block;
+}
+.satcom-pushbutton-input:checked:disabled + .satcom-pushbutton-button {
+  opacity: .4;
+  color: #81B2D9;
+  background: -webkit-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -moz-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -ms-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -o-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: linear-gradient(to bottom, #101923 0%, #192937 100%);
+  cursor: not-allowed;
+}
+.satcom-pushbutton-input:disabled + .satcom-pushbutton-button {
+  opacity: .4;
+  color: #fff;
+  background: -webkit-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -moz-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -ms-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -o-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: linear-gradient(to bottom, #49799d 0%, #5f99c8 100%);
+  cursor: not-allowed;
+}
+.satcom-toggle {
+  margin: 10px 0;
+  line-height: 1;
+}
+.satcom-toggle-input {
+  display: none;
+  position: relative;
+  font-family: 'open_sansregular', serif;
+  font-weight: 100;
+}
+.satcom-toggle-button {
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #101923;
+  height: 22px;
+  width: 70px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.satcom-toggle-button:after,
+.satcom-toggle-button:before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.satcom-toggle-button:after {
+  left: 0;
+}
+.satcom-toggle-input:checked + .satcom-toggle-button:after {
+  left: 50%;
+}
+.satcom-toggle-button {
+  background-color: #0F1B25;
+}
+.satcom-toggle-button:after {
+  background: -webkit-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -moz-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -ms-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -o-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-transition: left 0.167s ease-out;
+  -moz-transition: left 0.167s ease-out;
+  -ms-transition: left 0.167s ease-out;
+  transition: left 0.167s ease-out;
+}
+.satcom-toggle-input:checked + .satcom-toggle-button::before {
+  display: inline-block;
+  content: 'ON';
+  font-size: 12px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 3px 7px;
+  color: #fff;
+  background: -webkit-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -moz-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -ms-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: -o-linear-gradient(bottom, #055da0 0%, #0271ca 100%);
+  background: linear-gradient(to bottom, #055da0 0%, #0271ca 100%);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.satcom-toggle-input:not(checked) + .satcom-toggle-button::before {
+  display: inline-block;
+  content: 'OFF';
+  font-size: 12px;
+  font-weight: normal;
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: #fff;
+  padding: 3px 6px;
+  background: -webkit-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -moz-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -ms-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: -o-linear-gradient(bottom, #101923 0%, #192937 100%);
+  background: linear-gradient(to bottom, #101923 0%, #192937 100%);
+}
+.satcom-toggle-input:disabled + .satcom-toggle-button::before,
+.satcom-toggle-input:disabled + .satcom-toggle-button::after {
+  opacity: .4;
+  cursor: not-allowed;
+  color: #81B2D9;
+}
+.satcom-toggle-input:not(checked):disabled + .satcom-toggle-button:after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: -webkit-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -moz-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -ms-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: -o-linear-gradient(bottom, #49799d 0%, #5f99c8 100%);
+  background: linear-gradient(to bottom, #49799d 0%, #5f99c8 100%);
+}
